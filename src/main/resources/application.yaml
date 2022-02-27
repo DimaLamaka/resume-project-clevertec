@@ -1,0 +1,50 @@
+spring:
+  profiles:
+    active: prod
+
+---
+server:
+  port: 8000
+spring:
+  config:
+    activate:
+      on-profile: test
+    name: test-YAML
+  jpa:
+    database: h2
+    show-sql: true
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    platform: org.hibernate.dialect.H2Dialect
+    url: jdbc:h2:mem:resumes
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+
+---
+server:
+  port: 8080
+spring:
+  config:
+    activate:
+      on-profile: prod
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: org.hibernate.dialect.PostgreSQL95Dialect
+    url: jdbc:postgresql://localhost:5432/clevertec
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+  h2:
+    console:
+      enabled: true
+

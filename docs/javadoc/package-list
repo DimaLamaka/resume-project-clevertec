@@ -1,0 +1,11 @@
+by.lamaka.resume
+by.lamaka.resume.aspect
+by.lamaka.resume.controller
+by.lamaka.resume.dto
+by.lamaka.resume.exceptions
+by.lamaka.resume.model
+by.lamaka.resume.repository
+by.lamaka.resume.service
+by.lamaka.resume.service.filter
+by.lamaka.resume.service.mapper
+by.lamaka.resume.service.mapper.impl

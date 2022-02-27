@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "by.lamaka.resume.dto";
+option java_multiple_files = true;
+
+message ResumeDTO {
+  int64 id = 1;
+  string first_name = 2;
+  string second_name = 3;
+  string email = 4;
+  string phone_number = 5;
+}
+
+message ListResumeDTO{
+  repeated ResumeDTO resumeDTO = 1;
+}
